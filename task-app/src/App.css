@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.App {
+  overflow: hidden;
+}
+.container {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+/* Navbar */
+.banner-container {
+  width: 100%;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.navbar-brand img {
+  height: 50px;
+}
+.search-bar input {
+  border: none;
+  background: beige;
+  border-radius: 32px;
+  padding: 12px 10px;
+}
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.navbar-nav li {
+  margin: 0 10px;
+}
+.icons a {
+  color: #000;
+  margin-right: 10px;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .navbar-nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .navbar {
+    align-items: center;
+    position: relative;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f0efeb;
+    z-index: 1;
+    color: #000;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+  }
+  .navbar-nav.open {
+    transform: scaleY(1);
+  }
+  .navbar-nav li {
+    margin: 10px 0;
+  }
+  .navbar-nav a {
+    color: #000;
+    text-decoration: none;
+  }
+  .down-arrow {
+    margin-left: 5px;
+  }
+  .close-btn {
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+  }
+}
+/* Banner */
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+p {
+  font-size: 16px;
+  font-weight: 500;
+}
+h3 {
+  margin-bottom: 10px;
+}
+.banner-wrapper {
+  position: relative;
+  background-image: url(./images/image-1.PNG);
+  background-color: #f0efeb;
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  display: flex;
+  width: 100%;
+  height: 385px;
+  background-position: right;
+  align-items: center;
+}
+.banner-left-wrapper {
+  padding: 30px;
+  width: 50%;
+}
+.banner-right-wrapper {
+  display: none;
+}
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  color: #fff;
+  background: #000;
+  border: none;
+  border-radius: 4px;
+}
+@media (max-width: 767px) {
+  .banner-wrapper {
+    background-size: 100%;
+    background-image: none;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .banner-left-wrapper {
+    padding: 30px;
+    width: 100%;
+  }
+  .banner-right-wrapper {
+    display: block;
+  }
+  .banner-right-wrapper img {
+    width: 100%;
+  }
+}
+
+/* Second Section */
+.section-banner-wrapper {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fef0e7;
+}
+.section-banner-right-wrapper {
+  padding-top: 55px;
+}
+.section-banner-right-wrapper img {
+  width: 100%;
+}
+.section-banner-left-wrapper {
+  padding: 47px;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .section-banner-wrapper {
+    flex-direction: column-reverse;
+  }
+  .section-banner-right-wrapper img {
+    width: 100%;
+  }
+  .section-banner-right-wrapper {
+    padding-top: 0;
+  }
+  .section-banner-left-wrapper {
+    padding: 20px;
+    width: 100%;
+  }
+}
+/* cards */
+.card-wrapper img {
+  width: 100%;
+  margin-top: 20px;
+}
+.slider-button {
+  position: absolute;
+  width: -webkit-fill-available;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-wrapper {
+  display: flex;
+  width: 100%;
+}
+.image-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.image-slider {
+  position: relative;
+}
+.slider-button {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.slider-button button {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.card-1 {
+  padding: 20px 0 20px 30px;
+  background: #e2ede9;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.card-2,
+.card-3 {
+  padding: 20px 0 20px 30px;
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.card-2 {
+  margin: 0 20px;
+}
+@media (max-width: 767px) {
+  .card-wrapper {
+    display: block;
+  }
+  .card-2 {
+    margin: 20px 0;
+  }
+  .card-1,
+  .card-2,
+  .card-3 {
+    align-items: center;
+  }
+}
+
